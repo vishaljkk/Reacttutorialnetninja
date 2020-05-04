@@ -22,8 +22,8 @@ class Home extends Component{
         const postList = posts.length ? (
             posts.map(post =>{
                 return(
-                    <div className="post card" key={post.id}>
-                    <img src={pokeball} alt ="a pokeball regfered"></img>
+                    <div style={{overflow: 'hidden', paddingLeft: '80px'}} className="post card" key={post.id}>
+                    <img style={{position: 'absolute', top: '20px', left:'-100px',opacity:'0.6'}} src={pokeball} alt ="a pokeball regfered"></img>
                         <div className="card-content">
                         <Link to={'/'+post.id}>
                             <span className="card-title">
@@ -42,7 +42,7 @@ class Home extends Component{
             <div className="center">Loading data...</div>
         )
         return(
-            <div className="container">
+            <div className="container home">
                 <h4 className = "center">Home </h4>
                 {postList}
             </div>
